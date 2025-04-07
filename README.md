@@ -27,7 +27,7 @@ Employee attrition
 ├── docs                  # Project documentation
 │   ├── report.pdf
 │
-├── Images                # Power BI & UI screenshots
+├── Images                # Visualization images
 │   ├── model_comparison.png
 │   ├── class_distribution.png
 │   ├── best_model_confusion_matrix.png
