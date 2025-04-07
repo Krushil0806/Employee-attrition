@@ -41,6 +41,66 @@ Employee attrition
 
 ## 📊 Dataset Information
 
+- **Dataset Source:** [Kaggle - WA_Fn-UseC_-HR-Employee-Attrition](https://www.kaggle.com/datasets/mohamedmahmoud153/wa-fn-usec-hr-employee-attrition)
+
+The dataset contains several employee-related features believed to influence attrition. These features are organized as follows:
+
+### Feature Categories:
+- **Demographics:**
+  - Age
+  - Gender
+  - MaritalStatus
+- **Job-Related:**
+  - Department
+  - JobRole
+  - JobLevel
+  - JobSatisfaction
+  - YearsAtCompany
+- **Compensation:**
+  - MonthlyIncome
+  - DailyRate
+  - PercentSalaryHike
+- **Work-Life:**
+  - WorkLifeBalance
+  - OverTime
+  - BusinessTravel
+- **Tenure Metrics:**
+  - YearsSinceLastPromotion
+  - YearsWithCurrManager
+
+### Target Variable:
+- **Attrition:** Binary classification target variable
+  - **Yes**: Employee left the company.
+  - **No**: Employee is still with the company.
+
+---
+
+## 🔑 Key Features
+The following features are considered crucial for predicting employee attrition:
+
+- **Demographics:** Age, Gender, MaritalStatus
+- **Job-Related:** Department, JobRole, JobLevel, JobSatisfaction, YearsAtCompany
+- **Compensation:** MonthlyIncome, DailyRate, PercentSalaryHike
+- **Work-Life:** WorkLifeBalance, OverTime, BusinessTravel
+- **Tenure Metrics:** YearsSinceLastPromotion, YearsWithCurrManager
+
+---
+
+## 🔍 Notable Insights
+
+### **Attrition Drivers:**
+Several factors are likely to influence employee attrition, including:
+- **Low Job Satisfaction**: Employees with lower job satisfaction are more likely to leave.
+- **Overtime**: Employees working overtime regularly may experience burnout and higher attrition.
+- **Limited Promotion Opportunities**: Employees with fewer opportunities for promotion tend to leave more frequently.
+- **Work-Life Imbalance**: Employees reporting poor work-life balance may be more likely to leave.
+
+### **High-Risk Groups:**
+Employees in the following groups may be at a higher risk for attrition:
+- Frequent business travelers.
+- Employees in lower job levels or positions.
+- Employees with shorter tenures, particularly those with less than a few years at the company.
+
 ---
 
 ## 📌 Implementation Steps
