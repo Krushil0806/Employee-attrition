@@ -52,7 +52,7 @@ Employee attrition
 
 ### **2️⃣ Model Training**
 We implemented **6 ML models**:
-- **Logistic Regression**
+- **Logistic Regression** 📉
 - **Random Forest** 🌳
 - **K-Nearest Neighbors (KNN)** 🔍
 - **Decision Tree** 🌿
