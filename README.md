@@ -46,25 +46,20 @@ Employee attrition
 The dataset contains several employee-related features believed to influence attrition. These features are organized as follows:
 
 ### Feature Categories:
-- **Demographics:**
   - Age
   - Gender
   - MaritalStatus
-- **Job-Related:**
   - Department
   - JobRole
   - JobLevel
   - JobSatisfaction
   - YearsAtCompany
-- **Compensation:**
   - MonthlyIncome
   - DailyRate
   - PercentSalaryHike
-- **Work-Life:**
   - WorkLifeBalance
   - OverTime
   - BusinessTravel
-- **Tenure Metrics:**
   - YearsSinceLastPromotion
   - YearsWithCurrManager
 
