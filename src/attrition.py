@@ -12,7 +12,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     try:
-        model = joblib.load('model(rf).pkl')
+        model = joblib.load('models/model(rf).pkl')
         return model
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
