@@ -73,30 +73,55 @@ def main():
     
     # Create a form for input
     with st.form("prediction_form"):
-        # Create columns for better layout
+        # Personal Information Section
+        st.subheader("Personal Information")
         col1, col2 = st.columns(2)
         
         with col1:
             age = st.number_input("Age", min_value=18, max_value=65, value=30)
-            department = st.selectbox("Department", options=list(DEPARTMENT_OPTIONS.keys()))
-            distance_from_home = st.number_input("Distance from Home (km)", min_value=0, value=5)
-            education_field = st.selectbox("Education Field", options=list(EDUCATION_FIELD_OPTIONS.keys()))
-            env_satisfaction = st.slider("Environment Satisfaction", min_value=1, max_value=4, value=2)
-            job_involvement = st.slider("Job Involvement", min_value=1, max_value=4, value=2)
-            job_level = st.slider("Job Level", min_value=1, max_value=5, value=2)
-            job_role = st.selectbox("Job Role", options=list(JOB_ROLE_OPTIONS.keys()))
-            job_satisfaction = st.slider("Job Satisfaction", min_value=1, max_value=4, value=2)
             marital_status = st.selectbox("Marital Status", options=list(MARITAL_STATUS_OPTIONS.keys()))
-        
+            education_field = st.selectbox("Education Field", options=list(EDUCATION_FIELD_OPTIONS.keys()))
+            
         with col2:
+            distance_from_home = st.number_input("Distance from Home (km)", min_value=0, value=5)
             monthly_income = st.number_input("Monthly Income", min_value=1000, value=5000)
             monthly_rate = st.number_input("Monthly Rate", min_value=0, value=10000)
-            num_companies_worked = st.slider("Number of Companies Worked", min_value=0, max_value=9, value=2)
+        
+        # Job Details Section
+        st.subheader("Job Details")
+        col3, col4 = st.columns(2)
+        
+        with col3:
+            department = st.selectbox("Department", options=list(DEPARTMENT_OPTIONS.keys()))
+            job_role = st.selectbox("Job Role", options=list(JOB_ROLE_OPTIONS.keys()))
+            job_level = st.slider("Job Level", min_value=1, max_value=5, value=2)
+            
+        with col4:
             overtime = st.selectbox("Overtime", options=list(OVERTIME_OPTIONS.keys()))
             stock_option_level = st.slider("Stock Option Level", min_value=0, max_value=3, value=0)
+            num_companies_worked = st.slider("Number of Companies Worked", min_value=0, max_value=9, value=2)
+        
+        # Satisfaction Section
+        st.subheader("Satisfaction & Involvement")
+        col5, col6 = st.columns(2)
+        
+        with col5:
+            env_satisfaction = st.slider("Environment Satisfaction", min_value=1, max_value=4, value=2)
+            job_satisfaction = st.slider("Job Satisfaction", min_value=1, max_value=4, value=2)
+            
+        with col6:
+            job_involvement = st.slider("Job Involvement", min_value=1, max_value=4, value=2)
+        
+        # Experience Section
+        st.subheader("Work Experience")
+        col7, col8 = st.columns(2)
+        
+        with col7:
             total_working_years = st.number_input("Total Working Years", min_value=0, value=5)
             years_at_company = st.number_input("Years at Company", min_value=0, value=3)
             years_in_current_role = st.number_input("Years in Current Role", min_value=0, value=2)
+            
+        with col8:
             years_since_last_promotion = st.number_input("Years Since Last Promotion", min_value=0, value=1)
             years_with_curr_manager = st.number_input("Years with Current Manager", min_value=0, value=2)
         
@@ -121,9 +146,6 @@ def main():
             total_working_years, years_at_company, years_in_current_role,
             years_since_last_promotion, years_with_curr_manager
         ]
-        
-        # Display the processed input (optional - for debugging)
-        # st.write("Input values:", user_input)
         
         if model is not None:
             # Make prediction
@@ -171,5 +193,5 @@ def main():
             except Exception as e:
                 st.error(f"Error making prediction: {str(e)}")
 
-if __name__ == "_main_":
+if _name_ == "_main_":
     main()
