@@ -12,7 +12,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     try:
-        model = joblib.load('C:/Users/Krushil Dobariya/PYTHON/PROJECTS/AIML PROJECT/models/model(rf).pkl')
+        model = joblib.load('model(rf).pkl')
         return model
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
@@ -172,17 +172,17 @@ def main():
                 
                 factors = []
                 if overtime_value == 1:
-                    factors.append("⚠ Overtime might be causing stress")
+                    factors.append("⚠️ Overtime might be causing stress")
                 if job_satisfaction < 3:
-                    factors.append("⚠ Job satisfaction is low")
+                    factors.append("⚠️ Job satisfaction is low")
                 if distance_from_home > 10:
-                    factors.append("⚠ Long commute distance")
+                    factors.append("⚠️ Long commute distance")
                 if years_since_last_promotion > 3:
-                    factors.append("⚠ No recent promotion")
+                    factors.append("⚠️ No recent promotion")
                 if env_satisfaction < 3:
-                    factors.append("⚠ Low environment satisfaction")
+                    factors.append("⚠️ Low environment satisfaction")
                 if monthly_income < 3000:
-                    factors.append("⚠ Relatively low income")
+                    factors.append("⚠️ Relatively low income")
                 
                 if factors:
                     for factor in factors:
@@ -193,5 +193,5 @@ def main():
             except Exception as e:
                 st.error(f"Error making prediction: {str(e)}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
