@@ -2,6 +2,17 @@
 
 # Employee attrition prdiction
 
+🚀 [Click here to try the live Streamlit app](https://employee-attrition-forecast.streamlit.app/)  
+
+## 🔍 App Preview
+
+<p align="center">
+  <img src="Images/employee-attrition-forecast-stay-new.png" alt="App Screenshot 1" height="100%" width="45%" />
+  &nbsp;
+  <img src="Images/employee-attrition-forecast-leave-new.png" alt="App Screenshot 2" height="100%" width="45%" />
+</p>
+
+
 ## 📌 Project Overview
 The goal of this project is to predict employee attrition (whether an employee will leave the company) using machine learning models. The dataset contains various employee-related features such as job satisfaction, monthly income, years at the company, and more.
 
